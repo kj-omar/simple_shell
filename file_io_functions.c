@@ -42,10 +42,7 @@ int write_history(info_t *info)
 	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0644);
 	free(filename);
 	if (fd == -1)
-		return (-1);
-	for (node = info->history; node; node = node->next)
-	{
-		_putsfd(node->str, fd);
+		return (-		_putsfd(node->str, fd);
 		_putfd('\n', fd);
 	}
 	_putfd(BUF_FLUSH, fd);
